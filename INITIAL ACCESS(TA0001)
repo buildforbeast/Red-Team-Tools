@@ -1,0 +1,73 @@
+Initial access can be used as recon as well as exploitation in other words  
+
+(T1465, T1110 , T1464)
+
+Initial access - we use for wifi access points 
+Credential access - brute force and 
+Impact  -denial of service
+
+
+--------------------------------------------AIRCRACK-NG----------------------------------------------------------
+To check first network that may cause problem
+  airmon-ng check
+
+ And kill all process
+ 
+ airmon-ng check kill
+
+--turn on monitor mode--
+ airmon-ng start wlan0mon (wlan0 is interface can be different)
+To  confirm we can use ifconfig to see if mon is added
+
+Ru airodump to find all network and bssid
+  airodump-ng wlan0mon 
+ 
+ airodump-ng wlan0mon -bssid <id>  -c 6 -w <filename tosave>
+
+After end
+
+ airmon-ng stop 
+ 
+
+How to do  deauth attack
+In this you while capture the handshake which will then be used for cracking
+ aireplay-ng wlan0mon --deauth 20 -a <macAddressofrouter> -h <macaddressofpc> 
+20 means 20 deauth packet
+
+--Cracking captured handshake--
+ aircrack-ng -w wordlist capturefiile.cap
+
+-----------------------------------------------LUCKYSTRIKE----------------------------------------------
+Luckstrike is Powershell framework   used to make payload and execute using macros and send using phising email spear phising
+Use template to social engineering
+Customize payloads
+Anti-virus evasion 
+ 
+--Installing on windows 10 or 7 powershell version should be above 5+ --
+And tool as available in their github page 
+
+-------------------------------------------------GOPHISH-----------------------------------------------
+
+Gophish is tool used by business to make employee more aware about phishing it use Mitre ATT&CK frame work 
+Phishing
+Spearphishing attack
+Spearphishing link 
+
+
+-------------------------------------------------SQLMAP--------------------------------------------------
+
+Sql map is a  tool that automate  the process of detecting and exploiting sql injection flaws.fingerpriniting data exfiltration and underlying os access.
+T1190
+
+------------------------------------------------KINGPHISER---------------------------------------------
+
+Tooling for building complex phising attack scenarios as well as coordinating succesfull phishing campaigns .
+Open source tool available on github have prebuild template 
+It fall under initial access of valid accounts and phishing and spear phishing link
+
+-----------------------------------------------BASH BUNNY----------------------------------------
+
+It’s a usb attack fall under initial access simple and easy to use for covert offensive operation
+Support multi platform
+Multiple switched payloads
+Comes under hardware additions T1200 and exfiltration over physical medium T1052.001
