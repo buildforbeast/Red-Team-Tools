@@ -1,0 +1,56 @@
+Information gathering is must known and first phase of hacking without getting knowledge of a victim how can u plan
+what to search for fingerprints of that victim …
+Tool like osint tools active reconnaissance and passive recon are two phase 
+
+
+----------------------------------------AMASS OWASP -------------------------------------------
+
+Using Amass OWASP for reverse lookup network mapping tool used for api dns scraping etchttps://github.com/OWASP/Amass
+
+Available on github 
+ Amass 
+ amass enum -d tesla.com -src -ip -norecursive -dir tesla     
+-d domain , -src source ,-ip ip , -dir to which directory 
+
+ amass intel  -whois -d google.com  -dir nameoffolder
+ -whois look for whois database 
+
+
+To see in visulisation the domain and all network in amass
+
+
+
+---------------------------------------Sn1per----------------------------------------------------
+
+Sn1per  its very vast tool and overwhelming
+
+ sniper -t google.com
+
+For open source information gathering and passive 
+
+ sniper -t google.com -m stealth -o -re
+-t target  -m mode -o osint -re recon
+
+File stored in /usr/share/sniper/loot/workspace  for analysis all logs
+
+
+--------------------------------------TheHarvester-------------------------------------------------
+Harvester is a subdomain email reconissance tool 
+
+theharvester 
+
+---------------------------------------Recon-ng-----------------------------------------------
+will post later
+---------------------------------------Maltego----------------------------------------------
+It is an open source intelligence tool mostly used this tool by security researcher  it has community edition and enterprise edition 
+Maltego covers mitre att&ck  tactics
+T1253 Conduct Passive scanning
+T1250 ip address and space
+T1269 identify people of interest
+
+It is gui based app
+
+---------------------------------------Nikto---------------------------------------------
+Nikto is web apps vulnerability scanner 
+
+ nikto <ip>
